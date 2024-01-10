@@ -15,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/index', function () {
+    return view('home');
+})->name('index');
+
 Route::get('/', function () {
     return view('home');
 })->name('home');
@@ -27,13 +31,16 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
-Route::put('/form', function (Request $request) {
-    $request->validate([
+Route::post('/form', function (Request $request) {
+    
+    $results = $request->validate([
         'name' => ['required'],
         'email' => ['required', 'email'],
         'content' => ['required'],
+        'privacy' => ['required'],
+        
     ]);
-
+    
     Message::create([
         'name' => $request->input('name'),
         'email' => $request->input('email'),
@@ -45,5 +52,5 @@ Route::put('/form', function (Request $request) {
 })->name('form');
 
 Route::get('/thank-you', function () {
-    return view('thankyou');
-})->name('thank-you');
+    return view('thank-you');
+})->name('thank-you-page');

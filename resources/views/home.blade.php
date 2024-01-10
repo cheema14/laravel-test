@@ -29,13 +29,13 @@
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="https://placehold.co/1100x400" class="d-block w-100" alt="...">
+                    <img src="https://i.ibb.co/58PZhBc/slide1.png" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://placehold.co/1100x400" class="d-block w-100" alt="...">
+                    <img src="https://i.ibb.co/BqqRPw6/slide2.png" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://placehold.co/1100x400" class="d-block w-100" alt="...">
+                    <img src="https://i.ibb.co/9whzYtR/slide3.png" class="d-block w-100" alt="...">
                 </div>
             </div>
         </div>
@@ -43,7 +43,7 @@
 
     <div class="container py-4 text-center">
         <h1>Welcome</h1>
-        <button type="button" class="btn btn-primary" data-bs3-toggle="modal" data-bs-target="#exampleModal">
+        <button type="button" class="btn btn-primary" id="viewOffer" data-bs-toggle="modal" data-bs-target="#exampleModal">
             <i class="bi-bi-0-circle"></i>
             View Offer
         </button>
@@ -110,7 +110,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingThree">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseThree">
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         Accordion Item #3
                     </button>
                 </h2>
@@ -130,8 +130,11 @@
     </div>
 
     <div class="container py-4 text-center">
-        <a id="open-alert" class="btn btn-danger">
+        
+        <button type="button" class="btn btn-danger" id="open-alert">
             Open Alert
-        </a>
+        </button>
     </div>
+    
 @endsection
+
